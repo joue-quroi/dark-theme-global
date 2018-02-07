@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Global Dark :: Options</title>
+  </head>
+  <style type="text/css">
+    textarea {
+      width: 100%;
+    }
+    table {
+      width: 100%;
+    }
+    td:last-child {
+      text-align: right;
+    }
+  </style>
+  <body>
+    <table>
+      <tr>
+        <td>Brightness Level (50 to 100)</td>
+        <td><input type="number" id="brightness" min="50" max=100></td>
+      </tr>
+      <tr>
+        <td>Only apply to websites with light color theme</td>
+        <td><input type="checkbox" id="smart"></td>
+      </tr>
+    </table>
+    <p>Do not invert the following hostnames when the extension is enabled. Comma-separated list of hostnames:</p>
+    <textarea rows="4" id="hostnames"></textarea>
+    <p>Custom styling: (<a href="http://add0n.com/dark-mode-global.html#faq2">Instruction</a>, <a href="https://jsonformatter.org/json-editor">JSON editor</a>)</p>
+    <textarea rows="6" id="custom-rules"></textarea>
+    <p>
+      <input type="button" id="support" value="Support Development">
+      <input type="button" id="save" value="Save">
+      <span id="info"></span>
+    </p>
+    <script src="/webext/utils/EventEmitter.js"></script>
+    <script src="/webext/core/base.js"></script>
+    <script src="/webext/core/chrome.storage.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
